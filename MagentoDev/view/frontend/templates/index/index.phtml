@@ -1,0 +1,121 @@
+
+
+
+<?php $countryBlock = $block->getLayout()->createBlock('Magento\Directory\Block\Data');?>
+
+<?= $countryBlock->getCountryHtmlSelect($defValue = null, $name = 'country_id', $id = 'country', $title = 'Country');?>
+<div class="container">
+    <div class="row">
+<form id="custom-form" action="<?= $block->getFormActionUrl(); ?>" method="post" enctype="multipart/form-data" data-mage-init='{"validation": {}}'>
+    <fieldset class="fieldset">
+        <!-- Email Field -->
+        <div class="field">
+            <label for="email" class="label"><span>Email</span></label>
+            <div class="control">
+                <input type="email" name="email" id="email" class="input-text" data-validate="{required:true, 'validate-email':true}" />
+            </div>
+        </div>
+
+        <!-- Date of Birth Field -->
+        <div class="field">
+            <label for="dob" class="label"><span>Date of Birth</span></label>
+            <div class="control">
+                <input type="date" name="dob" id="dob" class="input-text" data-validate="{required:true}" />
+            </div>
+        </div>
+
+        <!-- Country Dropdown Field -->
+        <div class="field">
+            <label for="country" class="label"><span>Country</span></label>
+            <div class="control">
+                <select name="country" id="country" class="select" data-validate="{required:true}">
+                    <option value="">Select Country</option>
+                    <option value="US">United States</option>
+                    <option value="CA">Canada</option>
+                    <!-- Add more countries as needed -->
+                </select>
+            </div>
+        </div>
+
+        <!-- Password Field -->
+        <div class="field">
+            <label for="password" class="label"><span>Password</span></label>
+            <div class="control">
+                <input type="password" name="password" id="password" class="input-text" data-validate="{required:true, 'min-length':6}" />
+            </div>
+        </div>
+
+        <!-- Checkbox Field -->
+        <div class="field choice">
+            <label for="terms" class="label"><span>Accept Terms</span></label>
+            <div class="control">
+                <input type="checkbox" name="terms" id="terms" value="1" data-validate="{required:true}" />
+            </div>
+        </div>
+
+        <!-- File Upload Field -->
+        <div class="field">
+            <label for="fileupload" class="label"><span>Upload File</span></label>
+            <div class="control">
+                <input type="file" name="fileupload" id="fileupload" class="input-file" data-validate="{required:true}" />
+            </div>
+        </div>
+
+        <!-- Time Field -->
+        <div class="field">
+            <label for="time" class="label"><span>Time</span></label>
+            <div class="control">
+                <input type="time" name="time" id="time" class="input-text" data-validate="{required:true}" />
+            </div>
+        </div>
+
+        <!-- ZIP Code Field -->
+        <div class="field">
+            <label for="zipcode" class="label"><span>ZIP Code</span></label>
+            <div class="control">
+                <input type="text" name="zipcode" id="zipcode" class="input-text" data-validate="{required:true, 'validate-zip-international':true}" />
+            </div>
+        </div>
+
+        <!-- URL Field -->
+        <div class="field">
+            <label for="url" class="label"><span>Website URL</span></label>
+            <div class="control">
+                <input type="url" name="url" id="url" class="input-text" data-validate="{required:true, 'validate-url':true}" />
+            </div>
+        </div>
+
+        <!-- Number Field -->
+        <div class="field">
+            <label for="number" class="label"><span>Number</span></label>
+            <div class="control">
+                <input type="number" name="number" id="number" class="input-text" data-validate="{required:true, 'validate-number':true}" />
+            </div>
+        </div>
+
+        <!-- Digits Field -->
+        <div class="field">
+            <label for="digits" class="label"><span>Digits</span></label>
+            <div class="control">
+                <input type="text" name="digits" id="digits" class="input-text" data-validate="{required:true, 'validate-digits':true}" />
+            </div>
+        </div>
+
+        <!-- Credit Card Field -->
+        <div class="field">
+            <label for="cc" class="label"><span>Credit Card</span></label>
+            <div class="control">
+                <input type="text" name="cc" id="cc" class="input-text" data-validate="{required:true, 'validate-cc-number':true}" />
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="actions-toolbar">
+            <button type="submit" class="action submit primary">
+                <span>Submit</span>
+            </button>
+        </div>
+    </fieldset>
+</form>
+    </div>
+</div>
